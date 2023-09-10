@@ -184,10 +184,10 @@ public class VirtualControllerConfigurationLoader {
     private static final int START_BACK_Y = 64;
     private static final int START_BACK_WIDTH = 12;
     private static final int START_BACK_HEIGHT = 7;
-    private static final int HOME_X = 44;
+    private static final int HOME_X = 55;
     private static final int HOME_Y = 64;
-    private static final int HOME_SIZE = 15;
-
+    private static final int HOME_WIDTH = 12;
+    private static final int HOME_HEIGHT = 7;
     public static void createDefaultLayout(final VirtualController controller, final Context context) {
 
         DisplayMetrics screen = context.getResources().getDisplayMetrics();
@@ -309,11 +309,11 @@ public class VirtualControllerConfigurationLoader {
 
             controller.addElement(createDigitalButton(
                     VirtualControllerElement.EID_SPECIAL,
-                    ControllerPacket.SPECIAL_BUTTON_FLAG, 0, 4, "SPECIAL", -1, controller, context),
+                    ControllerPacket.SPECIAL_BUTTON_FLAG, 0, 4, "HOME", -1, controller, context),
                     screenScale(HOME_X, height) + rightDisplacement,
                     screenScale(HOME_Y, height),
-                    screenScale(HOME_SIZE, height),
-                    screenScale(HOME_SIZE, height)
+                    screenScale(HOME_WIDTH, height),
+                    screenScale(HOME_HEIGHT, height)
             );
 
             controller.addElement(createDigitalButton(
